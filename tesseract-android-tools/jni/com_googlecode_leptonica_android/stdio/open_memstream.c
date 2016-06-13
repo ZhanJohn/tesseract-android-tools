@@ -86,7 +86,7 @@ memwrite(void *cookie, const char *buf, int n)
     }
   /* Grow the buffer, if necessary.  Choose a geometric growth factor
      to avoid quadratic realloc behavior, but use a rate less than
-     (1+sqrt(5))/2 to accomodate malloc overhead.  Overallocate, so
+     (1+sqrt(5))/2 to accommodate malloc overhead.  Overallocate, so
      that we can add a trailing \0 without reallocating.  The new
      allocation should thus be max(prev_size*1.5, c->pos+n+1). */
   if (c->pos + n >= c->max)
